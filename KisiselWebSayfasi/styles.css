@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #003300;
+    color: #ededed;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: #006600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    position: relative;
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #006600;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+
+.navbar a{
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: 3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #003300;
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.home-content h1{
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-content h1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #003300;;
+    animation: showRight 1s ease forwards;
+    animation-delay : 1s;
+}
+
+.home-content h3 {
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color: #006600;
+}
+
+.home-content h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #003300;;
+    animation: showRight 1s ease forwards;
+    animation-delay : 1.3s;
+}
+
+.home-content p {
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.home-content p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #003300;;
+    animation: showRight 1s ease forwards;
+    animation-delay : 1.6s;
+}
+
+.home-content .btn-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+
+}
+
+.home-content .btn-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #003300;;
+    animation: showRight 1s ease forwards;
+    animation-delay : 1.9s;
+    z-index: 2;
+}
+
+.btn-box a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #006600;
+    border: 2px solid #006600;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn-box a:hover {
+    color: #006600;
+}
+
+.btn-box a:nth-child(2) {
+    background: #006600; /* Aynı renk olacak */
+    color: #ededed;
+}
+
+.btn-box a:nth-child(2):hover {
+    color: #006600;
+}
+
+.btn-box a:nth-child(2)::before {
+    background: #ededed;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ededed;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn-box a:hover::before {
+    width: 100%;
+}
+
+.home-sci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-sci a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #003300; /* Koyu yeşil arka plan */
+    border: 2px solid #006600; /* Açık yeşil kenarlık */
+    border-radius: 50%;
+    font-size: 20px;
+    color: #006600; /* Açık yeşil renk */
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+/* İmleç ikonun üzerine geldiğinde renk değişimi */
+.home-sci a:hover {
+    background: #006600; /* Açık yeşil arka plan */
+    color: #003300; /* Koyu yeşil metin rengi */
+    border-color: #003300; /* Kenarlık rengi değişimi */
+}
+
+/* Arka plan efekti */
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #003300; /* Hover için açık yeşil */
+    z-index: -1;
+    transition: 0.5s;
+}
+
+/* İmleç üzerine geldiğinde efekti tetikle */
+.home-sci a:hover::before {
+    background: #006600; /* Koyu yeşil arka plan */
+}
+
+
+.profile-picture {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+}
+
+.profile-picture img {
+    width: 400px; /* İstediğin boyutta ayarlayabilirsin */
+    height: 400px;
+    border-radius: 50%; /* Yuvarlak yapmak için */
+    border: 5px solid #ededed; /* Fotoğraf çevresine bir çerçeve eklemek için */
+    object-fit: cover; /* Fotoğrafın boyutuna göre kesilmesini sağlar */
+}
+
+.profile-picture img:hover {
+    filter: brightness(0.8); /* Koyulaştırma efekti */
+    transition: 0.3s ease; /* Geçiş animasyonu */
+}
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
+}
+
+/*Buradan itibaren hakkimda sayfasi için yazılan css kodları*/
+.about-page{
+    background: #003300;
+    color: #ededed;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between; /* Div'ler arasında boşluk bırakır */
+    align-items: center;
+    margin: 50px 0; /* Üst ve alt boşluk */
+    padding: 20px;
+}
+
+.about-box {
+    width: 350px;
+    height: 550px;
+    background-color: #006600;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column; /* Alt alta sıralama için */
+    align-items: flex-start; /* İçerikleri sola yaslamak için */
+    font-size: 16px;
+    color: #ededed;
+    text-align: left;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Hover'da animasyon eklemek için */
+}
+
+.about-box h1 {
+    font-size: 24px; /* Başlık boyutunu küçülttüm */
+    margin-bottom: 15px; /* Başlık altına boşluk ekledim */
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.about-box p {
+    font-size: 16px; /* Paragraf yazı boyutunu ayarladım */
+    line-height: 1.5; /* Satır arası boşluğu artırdım */
+    margin-top: 10px; 
+}
+
+.about-box:hover {
+    transform: translateY(-10px); /* Hover efekti: yukarı kayma */
+}
+
+/*Buradan itibaren projeler sayfasi için yazılan css kodları*/ 
+.proje-body {
+    margin: 0;
+    padding: 20px; /* Body ile div arasındaki ufak boşluk */
+    box-sizing: border-box;
+    background-color: #003300 /* Arka plan rengi */
+}
+
